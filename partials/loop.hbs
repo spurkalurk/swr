@@ -12,7 +12,9 @@
 				<div class="entry-meta">
           <div class="author-block {{#foreach tags}}{{slug}} {{/foreach}}">
           {{#if primary_author.profile_image}}
+          <a href="{{author.url}}/author/{{author.slug}}">
             <img src="{{img_url primary_author.profile_image}}" class="profile-image"/>
+          </a>
             {{else}}
             <p>{{author}}</p>
           {{/if}}

@@ -19,8 +19,10 @@
 								<h2 class="entry-title"><a href="{{url}}">{{{title}}}</a></h2>
 								<div class="entry-meta">
                   <div class="author-block {{#foreach tags}}{{slug}} {{/foreach}}">
-                    {{#if primary_author.profile_image}}
-                      <img src="{{img_url primary_author.profile_image}}" class="profile-image"/>
+                    {{#if author.profile_image}}
+                      <a href="{{author.url}}/author/{{author.slug}}">
+                        <img src="{{img_url author.profile_image}}" class="profile-image"/>
+                      </a>
                     {{else}}
                       <p>{{author}}</p>
                     {{/if}}

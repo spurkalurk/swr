@@ -1644,6 +1644,15 @@ a.post-thumbnail:hover img {
   left: 216px;
 }
 
+.featured-slider .author-block {
+  display: flex;
+  align-items: center;
+}
+
+.featured-slider .author-block img {
+  margin: 0 0 0 7px;
+}
+
 /**
  * 6.2 Grid Layout
  * ----------------------------------------------------------------------------
@@ -2448,5 +2457,5 @@ a.post-thumbnail:hover img {
 }
 
 .finished-with-regrets {
-  color: #ffb032;
+  color: #ff5344;
 }
