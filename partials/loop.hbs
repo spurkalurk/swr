@@ -10,9 +10,12 @@
 			<header class="entry-header">
 				<h2 class="entry-title"><a href="{{url}}">{{{title}}}</a></h2>
 				<div class="entry-meta">
-          <div class="author-block {{#foreach tags}}{{slug}} {{/foreach}}">
+          <div class="author-block">
+            <a href="{{#foreach tags}} {{url}}{{/foreach}}" class="star {{#foreach tags}}{{slug}} {{/foreach}}"></a>
           {{#if primary_author.profile_image}}
+          <a href="{{author.url}}/author/{{author.slug}}" class="profile-link">
             <img src="{{img_url primary_author.profile_image}}" class="profile-image"/>
+          </a>
             {{else}}
             <p>{{author}}</p>
           {{/if}}

@@ -4,8 +4,9 @@
 {{!-- The main content area on the homepage --}}
 <div id="content" class="site-content">
 	{{!-- The featured posts carousel --}}
+
 	{{#get "posts" filter="featured:true" limit="5" include="author,tags" as |featured_posts|}}
-		{{#if featured_posts}}
+		{{#if featured_posts }}
 		<aside class="featured-posts" aria-label="Featured">
 			<div class="slider-loading">
 				<div id="featured-slider" class="featured-slider">
@@ -18,9 +19,12 @@
 							<div class="slide-overlay">
 								<h2 class="entry-title"><a href="{{url}}">{{{title}}}</a></h2>
 								<div class="entry-meta">
-                  <div class="author-block {{#foreach tags}}{{slug}} {{/foreach}}">
-                    {{#if primary_author.profile_image}}
-                      <img src="{{img_url primary_author.profile_image}}" class="profile-image"/>
+                  <div class="author-block">
+                    <a href="{{#foreach tags}} {{url}}{{/foreach}}" class="star {{#foreach tags}}{{slug}} {{/foreach}}"></a>
+                    {{#if author.profile_image}}
+                      <a href="{{author.url}}/author/{{author.slug}}" class="profile-link">
+                        <img src="{{img_url author.profile_image}}" class="profile-image"/>
+                      </a>
                     {{else}}
                       <p>{{author}}</p>
                     {{/if}}
