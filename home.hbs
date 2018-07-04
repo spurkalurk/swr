@@ -4,8 +4,9 @@
 {{!-- The main content area on the homepage --}}
 <div id="content" class="site-content">
 	{{!-- The featured posts carousel --}}
+
 	{{#get "posts" filter="featured:true" limit="5" include="author,tags" as |featured_posts|}}
-		{{#if featured_posts}}
+		{{#if featured_posts }}
 		<aside class="featured-posts" aria-label="Featured">
 			<div class="slider-loading">
 				<div id="featured-slider" class="featured-slider">
